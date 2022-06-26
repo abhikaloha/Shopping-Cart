@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+    border: none!important;
+}
+
+.addbtn:hover {
+    background-color: darkgreen !important;
+}
+
+.removebtn:hover {
+    background-color: darkred !important;
+}
+.removebtncart:hover{
+    background-color: brown!important;
+}
+.plus:hover{
+   background-color:lightseagreen!important;
+}
+.minus:hover{
+  background-color: lightseagreen!important;
+}
+@media only screen and (max-width: 1000px) {
+    .grid-main {
+        width: 85% !important;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .grid-main {
+        grid-template-columns: 220px 220px !important;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .grid-main {
+        grid-template-columns: 220px !important;
+        justify-content: center !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .grid-cart {
+        width: 100% !important;
+    }
+}
