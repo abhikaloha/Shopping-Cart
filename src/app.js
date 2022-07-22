@@ -4,7 +4,7 @@ import "./index.css";
 import { BrowserRouter, Routes, Route, useParams, useNavigate } from "react-router-dom";
 import { Home1 } from "./home.js";
 import Navbar from "./navbar.js";
-import { Cart } from "./cart.js";
+let Cart = React.lazy(() => import("./cart.js"))
 let Home = () => {
     return (
         <>
@@ -12,7 +12,11 @@ let Home = () => {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home1 />} />
-                    <Route path="/cart" element={< Cart />} />
+                    <Route path="/cart" element={
+                        <React.Suspense fallback="LOADING....">
+                            <Cart/>
+                        </React.Suspense>
+                    } />
                 </Routes>
             </BrowserRouter>
         </>

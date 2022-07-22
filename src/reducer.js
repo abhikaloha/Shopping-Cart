@@ -1,4 +1,3 @@
-import { act } from "@testing-library/react"
 import data from './data';
 let reducer = (state, action) => {
     if (action.type == "show items") {

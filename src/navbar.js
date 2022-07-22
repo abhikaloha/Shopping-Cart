@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useReducer, useContext, useRef, Children } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import { useCustomhook } from './context';
-import { FaAirbnb, FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import "./index.css";
-import { BrowserRouter, Routes, Route, useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 let Navbar = () => {
-  let { state, dispatch } = useCustomhook()
+  let { state } = useCustomhook()
   let history = useNavigate()
   return (
     <>

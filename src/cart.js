@@ -2,7 +2,7 @@ import react from "react";
 import { useCustomhook } from './context';
 import { useNavigate } from "react-router-dom";
 import { FaBorderNone } from "react-icons/fa";
-export let Cart = () => {
+ let Cart = () => {
     let { state, dispatch } = useCustomhook()
     let history = useNavigate()
     if (state.cart.length == 0) {
@@ -44,3 +44,4 @@ export let Cart = () => {
         </>
     )
 }
+export default Cart;
